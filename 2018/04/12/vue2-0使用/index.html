@@ -16,12 +16,11 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="前端">
+    <meta name="keywords" content="前端开发">
 
 
-    <meta name="description" content="http协议是大家在互联网中最为熟悉的协议，只要上网大家都会遇到，但是，很多人被问道什么是http协议，http协议的内容是什么就懵了。这里，我们随便聊聊http协议。
-
-　　首先，我们说说协议...">
+    <meta name="description" content="前置知识1.html、css、javascript基础知识需要一定的掌握2.node.js初级知识，需要会npm的使用和项目初始化  
+下载Vue2.0的两个版本官方网站：https://vue...">
 
 
 
@@ -33,7 +32,7 @@
     <!--Title-->
 
 
-<title>HTTP协议的基础了解 | Ashinluo-blogs</title>
+<title>vue2.0开始走起 | Ashinluo-blogs</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Ashinluo-blogs" type="application/atom+xml">
@@ -138,16 +137,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="HTTP协议的基础了解">
+        <h1 id="vue2.0开始走起">
             
-	            HTTP协议的基础了解
+	            vue2.0开始走起
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/前端/">前端</a>
+            
         </span>
     
 
@@ -156,7 +155,7 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/前端/">前端</a>
+                    <a class="tag-link" href="/tags/前端开发/">前端开发</a>
                 
             </span>
         </span>
@@ -166,44 +165,53 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/04/03</span>
+            <span class="date-meta">2018/04/12</span>
         </span>
         
     
 </div>
             
             
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>380</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
     </div>
     
     <div class="post-body post-content">
-        <p>http协议是大家在互联网中最为熟悉的协议，只要上网大家都会遇到，但是，很多人被问道什么是http协议，http协议的内容是什么就懵了。这里，我们随便聊聊http协议。</p>
-<a id="more"></a>
-<p>　　首先，我们说说协议。我一直觉得“协议”这词不是很好理解，协商以后达成的决议，其实，就是规定，轮不到使用者协商的规定，就像本朝的法律，必须遵守。所以，http协议就是http的规定。</p>
-<p>　　http(Hypertext transfer protocol)超文本传输协议，通过浏览器和服务器进行数据交互，进行超文本（文本、图片、视频等）传输的规定。也就是说，http协议规定了超文本传输所要遵守的规则。那么网页在输入URL到加载，http究竟做了哪些工作呢？（见下图）</p>
-<p><img src="https://images0.cnblogs.com/blog/42030/201310/17230018-9fe0c3c244864b36b22ce0eb7ec74842.png" alt="img"></p>
-<p>​       浏览器负责发起请求和最后的响应请求，服务器接收请求后，处理请求。我们一步一步来看这个过程，http是如何设定步骤，设置规范的。</p>
-<p>　　1、输入URL。不管是链接还是地址栏的输入，情况都是一样的。http协议已经规定了URL的格式，通过http协议中的域名或IP找到服务器。</p>
-<p>　　2、找到服务器的同时，会有http的请求发送过来，告诉服务器我求你做什么？http协议规定了发送请求的格式，这个格式有三部分组成请求行、请求头、请求体。</p>
-<p>　　请求行包括请求的方式（get、post或其他）、要求响应的文件、http版本。</p>
-<p>　　请求头包括本机信息、浏览器信息等等，当然，也包括URL中？后面的参数。如图：</p>
-<p><img src="https://images0.cnblogs.com/blog/42030/201310/17231440-44a1e2aa088b40e9b444361c4a5548ae.png" alt="img"></p>
-<p>请求体包括POST传递数据的相关信息，Get方式传值时，请求体为空。</p>
-<p>　　3、请求信息发送至服务器以后，服务器会获取传递过来的相关信息进行后端程序的处理。一般通过request.querystring获取URL传递过来的指，通过request.form获取POST传递过来的值，当然，也是可以获取到所有的其他请求过来的信息，如浏览器信息、cookie信息、操作系统信息等。获取相关的数据以后，服务器就会根据程序进行处理。</p>
-<p>　　4、处理完成以后，服务器会做出响应，向浏览器输出相关信息。<strong>http对响应的格式也做出了规定</strong>，响应的信息主要包括，<strong>响应码、响应头、响应体</strong>。</p>
-<p>　　响应码用来标识服务器响应的结果，如我们常看到的200、404等。大致的分类如下：1开头的表示消息，2开头表示成功，3开头表示重定向，4开头表示失败，5开头表示服务器异常。</p>
-<p>　　响应头记录服务器相关信息如服务器是否启用压缩、服务器为IIS或Ngnix、程序所用服务端语言等等。当然，缓存也是在这里设置的，通过修改响应头可以修改html在本地缓存的情况，如设置浏览器缓存过期的时间。</p>
-<p><img src="https://images0.cnblogs.com/blog/42030/201310/17233401-2eb186f25c0d4780b0d31111b6ce941f.png" alt="img"></p>
-<p>　　响应体主要是我看到的html的相关内容了。</p>
-<p>　　<strong>完成以上四部操作以后，浏览器就断开了与服务器的数据连接，不能在进行数据传输，如果需要再次进行数据传输，那么一切就要从输入URL开始。</strong></p>
-<p>　　如此，便是一个完整的网页流程，<strong>http从中的作用就是对整个流程进行规定，包括执行步骤，每一步的数据格式</strong>。只有了解http协议以及网页是如何产生的以后，才能对网页进行更好的控制，例如控制浏览器缓存、通过非浏览器发送http请求、get和post传值的选择，甚至是建立长连接，这些都是以http协议为基础。</p>
-<p>parse() stringify()<br>var arr=[]  var arr=new Array()<br>push() pop() join() shift() reserve() slice()</p>
+        <h6 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h6><p>1.html、css、javascript基础知识需要一定的掌握<br>2.node.js初级知识，需要会npm的使用和项目初始化  </p>
+<h6 id="下载Vue2-0的两个版本"><a href="#下载Vue2-0的两个版本" class="headerlink" title="下载Vue2.0的两个版本"></a>下载Vue2.0的两个版本</h6><p>官方网站：<a href="https://vuejs.org/" target="_blank" rel="noopener">https://vuejs.org/</a>  </p>
+<ul>
+<li>开发版本：包含完整的警告和调试模式（vue.js）</li>
+</ul>
+<ul>
+<li>生产版本：删除了警告，进行了压缩（vue.min.js）  </li>
+</ul>
+<h6 id="项目结构搭建"><a href="#项目结构搭建" class="headerlink" title="项目结构搭建"></a>项目结构搭建</h6><p>新建项目结构如下图（只是简单新建，真正项目中会比较复杂）： </p>
+<p><img src="https://github.com/Ashinluo1/giuhub_images/blob/master/%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84.jpg?raw=true" alt="项目结构图" title="项目结构图"><br>1.新建vue2.0文件夹，在此文件夹中分别新建assets文件（主要用于存放静态文件）、example文件以及index.html<br>2.assets文件夹下新建css文件夹、js文件夹  </p>
+<h6 id="live-server的使用"><a href="#live-server的使用" class="headerlink" title="live-server的使用"></a>live-server的使用</h6><p>安装环境:node.js npm<br>live-server是一个简单级的开发服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g live-server  全局安装</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">在项目目录打开</span><br></pre></td></tr></table></figure></p>
+<p>live-server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">###### 编写第一个HelloWorld代码：</span><br></pre></td></tr></table></figure>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head><meta name="generator" content="Hexo 3.8.0"><br>    <meta charset="UTF-8"><br>    <script type="text/javascript" src="../assets/js/vue.js"></script><br>    <title>Helloworld</title><br></head></p>
+<p><body><br>    <h1>Hello World</h1><br>    <hr><br>    <div id="app"><br>        <br>    </div></body></p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    var app=new Vue({
+        el:&apos;#app&apos;,
+        data:{
+            message:&apos;hello Vue!&apos;
+        }
+    })
+&lt;/script&gt;
+</code></pre><p><br><br><code>`</code></p>
 
     </div>
     
     <div class="post-footer">
         <div>
             
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
             
         </div>
         <div>
@@ -214,15 +222,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2019/04/25/HTTP协议/" class="pre-post btn btn-default" title="关于HTTP协议">
+        <a href="/2019/04/03/HTTP协议的基础了解/" class="pre-post btn btn-default" title='HTTP协议的基础了解'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">关于HTTP协议</span>
+            <span class="hidden-xs">HTTP协议的基础了解</span>
         </a>
     
     
-        <a href="/2018/04/12/vue2-0使用/" class="next-post btn btn-default" title="vue2.0开始走起">
+        <a href="/2017/04/27/git提交代码5步曲/" class="next-post btn btn-default" title='git提交代码5步曲'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">vue2.0开始走起</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">git提交代码5步曲</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -265,9 +273,9 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#前置知识"><span class="toc-text">前置知识</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#下载Vue2-0的两个版本"><span class="toc-text">下载Vue2.0的两个版本</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#项目结构搭建"><span class="toc-text">项目结构搭建</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#live-server的使用"><span class="toc-text">live-server的使用</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">Hello World</span></a>
         
-    </div>
+    </li></div>
 </aside>
 
                 
