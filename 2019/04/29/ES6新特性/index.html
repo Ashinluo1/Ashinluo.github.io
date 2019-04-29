@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Ashinluo-blogs">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+    <meta name="keywords" content="前端">
+
+
+    <meta name="description" content="ES6相对于ES5新增了很多新特性，也是开发的新潮流。Chrome浏览器已经支持ES6了，但是有些低版本的浏览器还是不支持ES6的语法，这就需要我们把ES6的语法自动的转变成ES5的语法。在vu...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>ES6新特性 | Ashinluo-blogs</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Ashinluo-blogs" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner3.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="Ashinluo">
+            <img src="/img/avatar2.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 任意门外任意的飞 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://yoursite.com">Ashinluo-blogs</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="ES6新特性">
+            
+	            ES6新特性
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/04/29</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>ES6相对于ES5新增了很多新特性，也是开发的新潮流。<br>Chrome浏览器已经支持ES6了，但是有些低版本的浏览器还是不支持ES6的语法，这就需要我们把ES6的语法自动的转变成ES5的语法。在vue项目的开发中，我们可以使用webpack对项目进行打包编译。webpack有自动编译的功能。除了webpack自动编译，我们也可以用Babel将ES6编译成ES5。常用的转码器有Babel和Traceur。<br>下面我们就来看看ES6的常见新特新：<br><strong>1.let和const</strong><br>let与var类似是用来声明变量的，const用来声明常量。在实际开发中它们存在许多区别，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">      var a = 100;</span><br><span class="line">      let b = 200;</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(a); //100</span><br><span class="line">  console.log(b); //b is not defined -- Error</span><br><span class="line">```  </span><br><span class="line">a有值而b却not defined呢？因为ES5只有函数作用域和全局作用域，没有块级作用域。而let则实际上为JavaScript新增了块级作用域。用它所声明的变量，只在let命令所在的代码块内有效。  </span><br><span class="line">let不存在变量提升。那么什么是变量提升呢？简单来说就是无论声明在什么地方，都会被视为声明在顶部。下面来看个例子。</span><br></pre></td></tr></table></figure></p>
+<p>//ES5<br>    console.log(“ES5:”);<br>    var a = [];<br>    for (var i = 0; i &lt; 10; i++) {<br>        var c = i;<br>        a[i] = function () {<br>            console.log(c);<br>        };<br>    };<br>    a<a href>5</a>; //结果:9</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">是不是有许多小伙伴在疑惑为什么输出的不是5呢？变量i是var声明的，在全局范围内都有效。所以每一次循环，新的i值都会覆盖旧值，导致最后输出的是最后一轮的i的值。而使用let则不会出现这个问题。  </span><br><span class="line">```//ES6</span><br><span class="line">    console.log(&quot;ES6:&quot;);</span><br><span class="line">    var b = [];</span><br><span class="line">    for (var j = 0; j &lt; 10; j++) &#123;</span><br><span class="line">        let d = j;</span><br><span class="line">        b[j] = function () &#123;</span><br><span class="line">            console.log(d);</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;;</span><br><span class="line">    b[5](); 结果://5</span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">同时let也是不允许重复声明的。</span><br></pre></td></tr></table></figure>
+<p>  {<br>        var a = 100;<br>        var a = 200;<br>        console.log(a); //200<br>    }<br>    // 模块内部不允许用let命令重复声明<br>    {<br>        var a = 1;<br>        let a = 2;<br>        console.log(a); // 报错<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下面再来说说 const。const也用来声明变量，但是声明的是常量，一旦声明，常量的值就不能改变。它和let一样只在声明的区域内有用。</span><br></pre></td></tr></table></figure></p>
+<p>   {<br>        var a   = 100;<br>        const a = 200;<br>        console.log(a); // 报错<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const声明对象</span><br></pre></td></tr></table></figure></p>
+<pre><code>const person = {};
+person.name  = &quot;Zhangsan&quot;;
+person.age   = 30;
+
+console.log(person.name);   //Zhangsan
+console.log(person.age);    //30
+console.log(person);        //Object {name: &quot;Zhangsan&quot;, age: 30}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const对象冻结</span><br></pre></td></tr></table></figure>
+<pre><code>const person = Object.freeze({});
+person.name  = &quot;Zhangsan&quot;;
+person.age   = 30;
+
+console.log(person.name);   //undefined
+console.log(person.age);    //undefined
+console.log(person);        //Object
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**2.模板字符串**  </span><br><span class="line">相对于es5的&apos; &apos;+变量这种字符串拼接方法，es6的模板字符串要方便许多。</span><br></pre></td></tr></table></figure>
+<pre><code>var a = &apos;张三&apos;;
+var age = 18;
+var b = &apos;我的名字是&apos;+a+&apos;我今年&apos;+age+&apos;岁了&apos;; // es5
+var c = `我的名字是${a}我今年${age}岁了`; // es6
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当然简单的两行代码可能它的优势没有那么的明显，一旦代码量变多，你就能体会到它的便利了。  </span><br><span class="line">**3.函数**  </span><br><span class="line">**函数默认参数**</span><br></pre></td></tr></table></figure>
+<p> function num(n) {<br>        n = n || 200; //当传入n时，n为传入的值，没有则默认200<br>        return n;<br>     }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">es6为参数提供了默认值。在定义函数时便初始化了这个参数，直接看代码。</span><br></pre></td></tr></table></figure></p>
+<p> function num(n = 200) {<br>        return n;<br> }<br> console.log(n()); // 200<br> console.log(n(100)); // 100<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**箭头函数**  </span><br><span class="line">箭头函数的基本用法。</span><br></pre></td></tr></table></figure></p>
+<p>// es5<br>     function breakfast(dessert,drink){<br>        return dessert+drink;<br>     }<br>// es6<br>     let breakfast = (dessert,drink) =&gt; dessert + ‘ ‘ + drink;<br>     console.log(breakfast(‘面包’,’牛奶’));<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">箭头函数的this指向绑定定义是所在的作用域，而普通函数this指向运行时所在的作用域（全局对象），箭头函数没有自己的this而是引用外层的this。</span><br></pre></td></tr></table></figure></p>
+<p>// es5<br>cartView: function() {<br> var _this = this;<br> this.$http.get(“data/cartData.json”, {“id”: 123}).then(function(res) {<br>    _this.productList = res.data.result.list;<br>    console.log(_this.productList);<br> });<br>}<br>// es6<br>cartView(){<br>  this.$http.get(“data/cartData.json”, {“id”: 123}).then((res) {<br>    this.productList = res.data.result.list;<br>    console.log(this.productList);<br>  });<br> }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**4.解构**  </span><br><span class="line">数组和对象是JS中最常用也是最重要表示形式。为了简化提取信息，ES6新增了解构，这是将一个数据结构分解为更小的部分的过程。</span><br></pre></td></tr></table></figure></p>
+<p>// es5提取对象<br>    let people = {<br>        name : ‘json’,<br>        age : 18,<br>        sex : ‘male’<br>    }；<br>    let name = people.name;<br>    let age = people.age;<br>    …<br> // es6<br>    let people = {<br>        name : ‘json’,<br>        age : 18,<br>        sex : ‘male’<br>    }；<br>    let {name, age, sex} = people;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">相比于es5是不是简便了许多，当然数组的方法与对象的类似。下面我们再来举个栗子，函数参数解构赋值的默认值。</span><br></pre></td></tr></table></figure></p>
+<p>  fun ({x, y} = { x: 0, y: 0 }) {<br>        return [x, y];<br>   };</p>
+<p>  console.log(fun({x: 100, y: 200})); //[100, 200]<br>  console.log(fun({x: 100}));   //[100, undefined]<br>  console.log(fun({}));       //[undefined, undefined]<br>    console.log(fun());      //[0, 0]<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可能有人就会问了这个解构到底有什么用呢？其实它适合于各种与数组，对象，函数打交道的场景。下面我们来举个运用最广的例子—变量交换。直接上代码。</span><br></pre></td></tr></table></figure></p>
+<pre><code>//ES5
+console.log(&quot;ES5:&quot;);
+var a = 100;
+var b = 200;
+console.log(&quot;交换前：&quot;);
+console.log(&quot;a = &quot; + a);    //a = 100
+console.log(&quot;b = &quot; + b);    //b = 200
+var temp;
+temp = a;
+a = b;
+b = temp;
+console.log(&quot;交换后：&quot;);
+console.log(&quot;a = &quot; + a);    //a = 200
+console.log(&quot;b = &quot; + b);    //b = 100
+
+//ES6
+console.log(&quot;ES6:&quot;);
+var x = 100;
+var y = 200;
+console.log(&quot;交换前：&quot;);
+console.log(&quot;x = &quot; + x);    //x = 100
+console.log(&quot;y = &quot; + y);    //y = 200
+[x, y] = [y, x];
+console.log(&quot;交换后：&quot;);
+console.log(&quot;x = &quot; + x);    //x = 200
+console.log(&quot;y = &quot; + y);    //y = 100
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**5. ...操作符**  </span><br><span class="line">- 展开操作符</span><br></pre></td></tr></table></figure>
+<pre><code>let str2 = [&apos;苹果&apos;,&apos;梨子&apos;];
+console.log(str2);//[&quot;苹果&quot;, &quot;梨子&quot;]
+console.log(...str2);//苹果 梨子
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ 剩余操作符</span><br></pre></td></tr></table></figure>
+<p>  fun(a,b,…c){<br>        console.log(a,b,…c);//…c指展开数组<br>    }<br>fun(‘苹果’,’香蕉’,’橘子’,’梨子’,’李子’);//苹果 香蕉 橘子 梨子 李子）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">**6.class、 extends、 super**  </span><br><span class="line">这三个特性涉及了ES5中最令人头疼的的几个部分：原型、构造函数，继承...  </span><br><span class="line">ES6提供了更接近传统语言的写法，引入了Class（类）这个概念。新的class写法让对象原型的写法更加清晰、更像面向对象编程的语法，也更加通俗易懂。  </span><br><span class="line">``` </span><br><span class="line">class MyClass &#123;</span><br><span class="line">  constructor() &#123;  // 构造函数</span><br><span class="line">    // ...</span><br><span class="line">  &#125;</span><br><span class="line">  get prop() &#123;  // 取值</span><br><span class="line">    return &apos;getter&apos;;</span><br><span class="line">  &#125;</span><br><span class="line">  set prop(value) &#123; // 存值</span><br><span class="line">    console.log(&apos;setter: &apos;+value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;                                                                  let inst = new MyClass();</span><br><span class="line">inst.prop = 123;</span><br><span class="line">// setter: 123</span><br><span class="line">console.log(inst.prop);</span><br><span class="line">// &apos;getter                                                                          </span><br><span class="line">```  </span><br><span class="line">extends用法</span><br></pre></td></tr></table></figure></p>
+<p>class Point {<br>  constructor(x, y) {<br>    this.x = x;<br>    this.y = y;<br>  }<br>}</p>
+<p>class ColorPoint extends Point {<br>  constructor(x, y, color) {<br>    this.color = color; // ReferenceError<br>    super(x, y);<br>    this.color = color; // 正确<br>  }<br>}</p>
+<pre><code>在子类的构造函数中，只有调用super之后，才可以使用this关键字，否则会报错。这是因为子类实例的构建，是基于对父类实例加工，只有super方法才能返回父类实例。父类的静态方法，也会被子类继承。  
+注意，super虽然代表了父类Point的构造函数，但是返回的是子类ColorPoint的实例，即super内部的this指的是ColorPoint，因此super()在这里相当于Point.prototype.constructor.call(this)。  
+super这个关键字，既可以当作函数使用，也可以当作对象使用。在这两种情况下，它的用法完全不同。
+作为函数时，super()只能用在子类的构造函数之中，用在其他地方就会报错。  
+</code></pre><pre><code>class A {}
+class B extends A {
+  m() {
+     super(); // 报错
+  }
+}
+</code></pre><pre><code>第二种情况，super作为对象时，在普通方法中，指向父类的原型对象；在静态方法中，指向父类。  
+</code></pre><pre><code>class A {
+       p() {
+        return 2;
+      }
+    }
+ class B extends A {
+        constructor() {
+        super();
+        console.log(super.p()); // 2
+      }
+    }
+    let b = new B();
+</code></pre><pre><code>上面代码中，子类B当中的super.p()就是将super当作一个对象使用。这时，super在普通方法之中，指向A.prototype，所以super.p()就相当于A.prototype.p()。这里需要注意，由于super指向父类的原型对象，所以定义在父类实例上的方法或属性，是无法通过super调用的。  
+**7.Promise**  
+在promise之前代码过多的回调或者嵌套，可读性差、耦合度高、扩展性低。通过Promise机制，大大提高了代码可读性；用同步编程的方式来编写异步代码，保存线性的代码逻辑，极大的降低了代码耦合性而提高了程序的可扩展性。  
+</code></pre><p>this.$http(‘/api/getData’).then((res) =&gt; {<br>res = res.data;<br>this.dataList = res.result;<br>}).catch((err) =&gt; {<br>…<br>});</p>
+<pre><code>这是一个vue的异步请求，用的就是promise机制，这样的好处是不会因为多层的回调而降低代码的可读性。
+
+当然这只是promise的冰山一角，想要更好的掌握它还是需要更加深入的去学习它。  
+**8.Set**  
+实例的方法分为两大类：操作方法（用于操作数据）和遍历方法（用于遍历成员）。下面先介绍四个操作方法。  
+操作方法：  
+add(value)：添加某个值，返回Set结构本身。  
+delete(value)：删除某个值，返回一个布尔值，表示删除是否成功。  
+has(value)：返回一个布尔值，表示该值是否为Set的成员。  
+clear()：清除所有成员，没有返回值。  
+遍历方法：  
+keys()：返回键名的遍历器  
+values()：返回键值的遍历器  
+entries()：返回键值对的遍历器  
+forEach()：使用回调函数遍历每个成员  
+由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值）  
+</code></pre><p>let str = [1,2,3,2,4,3,5,6,4,1,7];<br>console.log(‘str的长度为：’+str.length); // 长度为11<br>let s = new Set(str);<br>console.log(s);<br>console.log(‘去重后的长度为：’+s.size);//长度为7<br>console.log( Array.from(s));//Array.from 将Set转换为数组形式</p>
+<p>let set = new Set([‘red’, ‘green’, ‘blue’]);<br>var arr = new Set();<br>for (let item of set.keys()) {<br>  console.log(item);// red green blue<br>  arr.add(item);//将item添加到arr set结构中<br>}<br>console.log(arr);<br>arr.forEach((value, key) =&gt; console.log(key + ‘ : ‘ + value));</p>
+<pre><code>**9.import 和 export**  
+</code></pre><p>//全部导入<br>import mallHeader from ‘../components/header.vue’<br>//导入部分<br>import {name, age} from ‘./example’<br>// 导出默认, 有且只有一个默认<br>export default App<br>// 部分导出<br>export class App extend Component {};</p>
+<p><code>`</code><br>这些仅仅是es6家族中的冰山一角，想要更加全面的去掌握这一技能，就需要我们更加系统的去学习它。  </p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2019/04/26/前端模块化开发/" class="next-post btn btn-default" title="前端模块化开发">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">前端模块化开发</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: '',
+            appKey: '',
+            placeholder: '说点什么吧',
+            notify: false,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2017
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
