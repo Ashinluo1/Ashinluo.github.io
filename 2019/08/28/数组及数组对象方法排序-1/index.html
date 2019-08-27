@@ -190,7 +190,13 @@ function sortByKey(array, key) ...">
 <p>});</p>
 <p>}</p>
 <p>在vue中使用例子：</p>
-<p>HTML部分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;li v-for=&quot;item in sortItems&quot;&gt;&#123;&#123; item &#125;&#125;&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">&lt;ul v-for=&quot;item in sortVe&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;li &gt;&#123;&#123;item.value&#125;&#125;-&#123;&#123;item.ve&#125;&#125;&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p>
+<p>HTML部分：</p>
+<p><code>&lt;ul&gt;</code></p>
+<p><code>&lt;li v-for=&quot;item in sortItems&quot;&gt;&lt;/li&gt;</code></p>
+<p><code>&lt;/ul&gt;</code></p>
+<p><code>&lt;ul v-for=&quot;item in sortVe&quot;&gt;</code></p>
+<p><code>&lt;li &gt;-&lt;/li&gt;</code></p>
+<p><code>&lt;/ul&gt;</code></p>
 <p>js部分：</p>
 <p>data: {</p>
 <p>items: [20, 23, 18, 65, 32, 19, 54, 56, 41],</p>
